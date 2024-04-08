@@ -16,10 +16,8 @@ struct City: Identifiable {
     
     static var placeholder: [City] {
         [
-            City(name: "Ennepetal", lat: 0.0, long: 0.0),
-            City(name: "Amsterdam", lat: 0.0, long: 0.0),
-            City(name: "Hagen", lat: 0.0, long: 0.0),
-            City(name: "Nova Iguaçu", lat: 0.0, long: 0.0)
+            City(name: "Ennepetal", lat: 51.29848, long: 7.3629),
+            City(name: "Nova Iguaçu", lat: -22.75917, long: -43.45111)
         ]
         
     }

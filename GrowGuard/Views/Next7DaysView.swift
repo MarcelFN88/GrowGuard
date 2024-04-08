@@ -9,6 +9,14 @@ import SwiftUI
 
 struct Next7DaysView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State var forecasts: [WeatherData.Daily]
+    
+    let dateFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateFormat = "dd.MM."
+        return f
+    }()
+    
     var body: some View {
             ScrollView {
                 navigationBar
@@ -17,19 +25,12 @@ struct Next7DaysView: View {
                     .font(.title)
                     .fontWeight(.semibold)
                 
-                Spacer()
-                    .frame(height: 50)
                 
                 VStack(spacing: 16) {
-                    DailyForecastView(date: "Apr. 7", icon: "cloud", high: "20°C", low: "13°C")
-                    DailyForecastView(date: "Apr. 8", icon: "cloud", high: "20°C", low: "13°C")
-                    DailyForecastView(date: "Apr. 9", icon: "cloud", high: "20°C", low: "13°C")
-                    DailyForecastView(date: "Apr. 10", icon: "cloud", high: "20°C", low: "13°C")
-                    DailyForecastView(date: "Apr. 11", icon: "cloud", high: "20°C", low: "13°C")
-                    DailyForecastView(date: "Apr. 12", icon: "cloud", high: "20°C", low: "13°C")
-                    DailyForecastView(date: "Apr. 13", icon: "cloud", high: "20°C", low: "13°C")
+                    ForEach(forecasts, id: \.dt) { forecast in
+                        DailyForecastView(date: dateFormatter.string(from: forecast.dt), icon: forecast.weather.first?.icon ?? "10d", high: "\(forecast.temp.max)°", low: "\(forecast.temp.min)°")}
                 }
-                .padding()
+                .padding(8)
                 .padding(.vertical, 8)
                 .frame(maxWidth: .infinity)
                 .background(
@@ -66,6 +67,3 @@ struct Next7DaysView: View {
     }
 }
 
-#Preview {
-    Next7DaysView()
-}

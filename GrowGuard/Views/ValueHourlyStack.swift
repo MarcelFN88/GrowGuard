@@ -21,7 +21,7 @@ struct ValueHourlyStack: View {
             WebImage(url: icon)
                 .resizable()
                 .scaledToFit()
-//                .frame(width: 50, height: 50)
+                .frame(width: 60, height: 60)
             
             Text(temp)
                 .fontWeight(.semibold)

@@ -10,7 +10,7 @@ import SDWebImage
 import SDWebImageSwiftUI
 
 struct CityOverview: View {
-    @StateObject private var model = CityOverviewModel(lat: 51.29848, long: 7.3629)
+    @StateObject private var model = CityOverviewModel(lat: 51.29848, long: 49.0)
     
     @State var city: String
     @State var time: String
@@ -50,8 +50,8 @@ struct CityOverview: View {
         VStack {
             WebImage(url: model.iconURL)
                 .resizable()
-            //                .scaledToFit()
-                .frame(width: 190, height: 210)
+                .scaledToFit()
+                .frame(width: 170, height: 190)
                 .offset(y: 30)
             
             Text(model.temp)
@@ -82,11 +82,11 @@ struct CityOverview: View {
     }
     
     private var currentInfos: some View {
-        HStack(spacing: 25) {
-            ValueDescriptionStack(icon: "thermometer", boldText: model.feelsLike, description: "Feels Like")
-            ValueDescriptionStack(icon: "humidity", boldText: model.humidity, description: "Humidity")
-            ValueDescriptionStack(icon: "cloud", boldText: model.pressure, description: "Pressure")
-            ValueDescriptionStack(icon: "wind", boldText: model.windSpeed, description: "Windspeed")
+        HStack(spacing: 20) {
+            ValueDescriptionStack(icon: "thermometer", boldText: $model.feelsLike, description: "Feels Like")
+            ValueDescriptionStack(icon: "humidity", boldText: $model.humidity, description: "Humidity")
+            ValueDescriptionStack(icon: "cloud", boldText: $model.pressure, description: "Pressure")
+            ValueDescriptionStack(icon: "wind", boldText: $model.windSpeed, description: "Windspeed")
         }
         .padding()
         .padding(.vertical, 0)
@@ -106,12 +106,14 @@ struct CityOverview: View {
                 
                 Spacer()
                 
-                NavigationLink(
-                    destination: Next7DaysView()) {
-                        Text("Next 7 Day's ")
-                        Image(systemName: "chevron.right")
-                    }
-                    .foregroundColor(.primary)
+                if model.weatherData != nil {
+                    NavigationLink(
+                        destination: Next7DaysView(forecasts: model.weatherData!.daily)) {
+                            Text("Next 7 Day's ")
+                            Image(systemName: "chevron.right")
+                        }
+                        .foregroundColor(.primary)
+                }
             }
             .font(Font.body.bold())
             .padding(.horizontal, 32)
@@ -125,7 +127,7 @@ struct CityOverview: View {
                     if model.weatherData != nil {
                         ForEach(model.weatherData!.hourly, id:\.dt) {forecast in
                             let url = URL(string: "https://openweathermap.org/img/wn/\(forecast.weather.first?.icon ?? "10d")@2x.png")!
-                            ValueHourlyStack(time: forecast.dt.description, icon: url, temp: "\(forecast.temp)")
+                            ValueHourlyStack(time: model.dataFormatter.string(from: forecast.dt),icon: url, temp: "\(forecast.temp)°C")
                         }
                     }
                 }

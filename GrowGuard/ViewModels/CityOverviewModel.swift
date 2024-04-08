@@ -11,42 +11,24 @@ import SwiftUI
 final class CityOverviewModel: ObservableObject {
     @Published var lat: Double
     @Published var long: Double
+
     @Published var weatherData: WeatherData?
+    @Published var iconURL: URL = URL(string: "https://openweathermap.org/img/wn/10d@2x.png")!
+    @Published var temp: String = ""
+    @Published var description: String = ""
+    @Published var feelsLike: String = ""
+    @Published var pressure: String = ""
+    @Published var humidity: String = ""
+    @Published var windSpeed: String = ""
     
     private var cancellables = Set<AnyCancellable>()
+    let dataFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateFormat = "HH:mm"
+        return f
+    }()
     
-    var icon: String {
-        weatherData?.current.weather.first?.icon ?? "10d"
-    }
-    
-    var iconURL: URL {
-        URL(string: "https://openweathermap.org/img/wn/10d@2x.png")!
-    }
-    
-    var temp: String {
-        "\(weatherData?.current.temp ?? 0)°C"
-    }
-    
-    var description: String {
-        weatherData?.current.weather.first?.description ?? ""
-    }
-    
-    var feelsLike: String {
-        "\(weatherData?.current.feelsLike ?? 0)"
-    }
-    
-    var pressure: String {
-        "\(weatherData?.current.pressure ?? 0)"
-    }
-    
-    var humidity: String {
-        "\(weatherData?.current.humidity ?? 0)"
-    }
-    
-    var windSpeed: String {
-        "\(weatherData?.current.windSpeed ?? 0)"
-    }
-    
+   
     init(lat: Double, long: Double) {
         self.lat = lat
         self.long = long
@@ -61,11 +43,22 @@ final class CityOverviewModel: ObservableObject {
                 switch completion {
                 case.failure(let error):
                     print(error.localizedDescription)
-                    return case.finished: return
+                    return 
+                case.finished: return
                 }
             } receiveValue: { [weak self] (weatherData) in
-                self?.weatherData = weatherData
-                
+                DispatchQueue.main.async {
+                    self?.weatherData = weatherData
+                    let icon = weatherData.current.weather.first?.icon ?? "10d"
+                    self?.iconURL = URL(string: "https://openweather.org/img/wn/\(icon)@2x.png")!
+                    self?.temp = "\(weatherData.current.temp)°C"
+                    self?.description = "\(weatherData.current.weather.first?.description ?? "")"
+                    self?.feelsLike = "\(weatherData.current.feelsLike)°C"
+                    self?.pressure = "\(weatherData.current.pressure)mb"
+                    self?.humidity = "\(weatherData.current.humidity)%"
+                    self?.windSpeed = "\(weatherData.current.windSpeed)m/s"
+                    
+                }
             }
             .store(in: &cancellables)
     }
