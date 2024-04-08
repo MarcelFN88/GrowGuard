@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct City {
+struct City: Identifiable {
+    let id = UUID()
     let name: String
     let lat: Double
     let long: Double

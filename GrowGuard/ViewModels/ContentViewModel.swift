@@ -9,4 +9,8 @@ import SwiftUI
 
 final class ContentViewModel: ObservableObject {
     @Published var cities = [City]()
+    
+    init() {
+        cities = City.placeholder
+    }
 }

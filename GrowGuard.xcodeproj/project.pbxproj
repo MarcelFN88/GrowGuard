@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6846BB92BC2C73E00F3E648 /* DailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6846BB82BC2C73E00F3E648 /* DailyForecastView.swift */; };
+		F6846BBB2BC2E8F200F3E648 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6846BBA2BC2E8F200F3E648 /* WeatherData.swift */; };
+		F6846BBE2BC32C3100F3E648 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6846BBD2BC32C3100F3E648 /* WeatherService.swift */; };
+		F6846BC02BC332E100F3E648 /* Statics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6846BBF2BC332E100F3E648 /* Statics.swift */; };
+		F6846BC22BC338F600F3E648 /* CityOverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6846BC12BC338F600F3E648 /* CityOverviewModel.swift */; };
+		F6846BC52BC3400B00F3E648 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F6846BC42BC3400B00F3E648 /* SDWebImageSwiftUI */; };
 		F6865FEE2BBEB292001523E9 /* ValueDescriptionStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6865FED2BBEB292001523E9 /* ValueDescriptionStack.swift */; };
 		F6865FF02BBECE50001523E9 /* ValueHourlyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6865FEF2BBECE50001523E9 /* ValueHourlyStack.swift */; };
 		F6865FF32BBED668001523E9 /* CityOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6865FF22BBED668001523E9 /* CityOverview.swift */; };
 		F6865FF62BBEDA2F001523E9 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6865FF52BBEDA2F001523E9 /* ContentViewModel.swift */; };
 		F6865FF92BBEDBEB001523E9 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6865FF82BBEDBEB001523E9 /* City.swift */; };
+		F6865FFB2BBF02D4001523E9 /* Next7DaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6865FFA2BBF02D4001523E9 /* Next7DaysView.swift */; };
 		F6A006C32BBE963A00EF7F62 /* GrowGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A006C22BBE963A00EF7F62 /* GrowGuardApp.swift */; };
 		F6A006C52BBE963A00EF7F62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A006C42BBE963A00EF7F62 /* ContentView.swift */; };
 		F6A006C72BBE963B00EF7F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A006C62BBE963B00EF7F62 /* Assets.xcassets */; };
@@ -20,11 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6846BB82BC2C73E00F3E648 /* DailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastView.swift; sourceTree = "<group>"; };
+		F6846BBA2BC2E8F200F3E648 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		F6846BBD2BC32C3100F3E648 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		F6846BBF2BC332E100F3E648 /* Statics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statics.swift; sourceTree = "<group>"; };
+		F6846BC12BC338F600F3E648 /* CityOverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityOverviewModel.swift; sourceTree = "<group>"; };
 		F6865FED2BBEB292001523E9 /* ValueDescriptionStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueDescriptionStack.swift; sourceTree = "<group>"; };
 		F6865FEF2BBECE50001523E9 /* ValueHourlyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueHourlyStack.swift; sourceTree = "<group>"; };
 		F6865FF22BBED668001523E9 /* CityOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityOverview.swift; sourceTree = "<group>"; };
 		F6865FF52BBEDA2F001523E9 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F6865FF82BBEDBEB001523E9 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		F6865FFA2BBF02D4001523E9 /* Next7DaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Next7DaysView.swift; sourceTree = "<group>"; };
 		F6A006BF2BBE963A00EF7F62 /* GrowGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A006C22BBE963A00EF7F62 /* GrowGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowGuardApp.swift; sourceTree = "<group>"; };
 		F6A006C42BBE963A00EF7F62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,16 +51,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6846BC52BC3400B00F3E648 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6846BBC2BC32C0100F3E648 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F6846BBD2BC32C3100F3E648 /* WeatherService.swift */,
+				F6846BBF2BC332E100F3E648 /* Statics.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F6865FF12BBED636001523E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				F6865FF22BBED668001523E9 /* CityOverview.swift */,
+				F6865FED2BBEB292001523E9 /* ValueDescriptionStack.swift */,
+				F6865FEF2BBECE50001523E9 /* ValueHourlyStack.swift */,
+				F6865FFA2BBF02D4001523E9 /* Next7DaysView.swift */,
+				F6846BB82BC2C73E00F3E648 /* DailyForecastView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -56,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				F6865FF52BBEDA2F001523E9 /* ContentViewModel.swift */,
+				F6846BC12BC338F600F3E648 /* CityOverviewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -64,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				F6865FF82BBEDBEB001523E9 /* City.swift */,
+				F6846BBA2BC2E8F200F3E648 /* WeatherData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,8 +120,9 @@
 				F6A006C22BBE963A00EF7F62 /* GrowGuardApp.swift */,
 				F6A006C42BBE963A00EF7F62 /* ContentView.swift */,
 				F6865FF72BBEDBC5001523E9 /* Models */,
-				F6865FF42BBEDA12001523E9 /* ViewModels */,
+				F6846BBC2BC32C0100F3E648 /* Services */,
 				F6865FF12BBED636001523E9 /* Views */,
+				F6865FF42BBEDA12001523E9 /* ViewModels */,
 				F6A006C82BBE963B00EF7F62 /* Preview Content */,
 			);
 			path = GrowGuard;
@@ -102,8 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				F6A006C92BBE963B00EF7F62 /* Preview Assets.xcassets */,
-				F6865FEF2BBECE50001523E9 /* ValueHourlyStack.swift */,
-				F6865FED2BBEB292001523E9 /* ValueDescriptionStack.swift */,
 				F6A006D02BBE9BE700EF7F62 /* CustomColor.swift */,
 			);
 			path = "Preview Content";
@@ -125,6 +153,9 @@
 			dependencies = (
 			);
 			name = GrowGuard;
+			packageProductDependencies = (
+				F6846BC42BC3400B00F3E648 /* SDWebImageSwiftUI */,
+			);
 			productName = GrowGuard;
 			productReference = F6A006BF2BBE963A00EF7F62 /* GrowGuard.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +184,9 @@
 				Base,
 			);
 			mainGroup = F6A006B62BBE963A00EF7F62;
+			packageReferences = (
+				F6846BC32BC3400B00F3E648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = F6A006C02BBE963A00EF7F62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,13 +214,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6A006C52BBE963A00EF7F62 /* ContentView.swift in Sources */,
+				F6846BB92BC2C73E00F3E648 /* DailyForecastView.swift in Sources */,
 				F6865FF32BBED668001523E9 /* CityOverview.swift in Sources */,
 				F6865FEE2BBEB292001523E9 /* ValueDescriptionStack.swift in Sources */,
+				F6846BBE2BC32C3100F3E648 /* WeatherService.swift in Sources */,
 				F6865FF62BBEDA2F001523E9 /* ContentViewModel.swift in Sources */,
+				F6846BBB2BC2E8F200F3E648 /* WeatherData.swift in Sources */,
 				F6A006C32BBE963A00EF7F62 /* GrowGuardApp.swift in Sources */,
 				F6A006D12BBE9BE700EF7F62 /* CustomColor.swift in Sources */,
 				F6865FF92BBEDBEB001523E9 /* City.swift in Sources */,
 				F6865FF02BBECE50001523E9 /* ValueHourlyStack.swift in Sources */,
+				F6846BC22BC338F600F3E648 /* CityOverviewModel.swift in Sources */,
+				F6846BC02BC332E100F3E648 /* Statics.swift in Sources */,
+				F6865FFB2BBF02D4001523E9 /* Next7DaysView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6846BC32BC3400B00F3E648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6846BC42BC3400B00F3E648 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6846BC32BC3400B00F3E648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6A006B72BBE963A00EF7F62 /* Project object */;
 }
