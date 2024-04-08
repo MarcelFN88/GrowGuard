@@ -10,7 +10,7 @@ import SDWebImage
 import SDWebImageSwiftUI
 
 struct CityOverview: View {
-    @StateObject private var model = CityOverviewModel(lat: 48.0, long: 49.0)
+    @StateObject private var model = CityOverviewModel(lat: 51.29848, long: 7.3629)
     
     @State var city: String
     @State var time: String
